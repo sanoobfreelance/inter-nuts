@@ -1,38 +1,421 @@
-.App {
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navabr */
+
+.nav-links {
+  color: white;
+
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: smaller;
+  font-weight: 600;
+}
+.nav-links:hover {
+  background-color: rgb(37, 63, 64);
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+/* dashboard */
+
+.divider {
+  border-top: 3px solid rgb(37, 63, 64);
+  width: 100%;
+}
+.dashboardContent {
+  text-align: left;
+  margin-top: 205px;
+  margin-left: 155px;
+  /* max-width: 600px; */
+  color: #ffff;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 60%);
+
+  /* font-weight: 600; */
+  font-style: normal;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 1.2em;
+}
+.dashboardContent2 {
+  font-family: Verdana, Geneva, sans-serif;
+
+  text-align: left;
+
+  margin-left: 155px;
+  /* max-width: 600px; */
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 60%);
+  margin-top: 0;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 1.2em;
+}
+.dashboardbutton {
+  margin-left: 155px;
+}
+.dashboard {
+  width: 100%;
+  height: 800px;
+  padding-top: 20px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./Assets/about-image.jpg");
+
+  opacity: 1;
+  /* background-image: url("/src/components/Images/build.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+}
+.home-vedio {
+  width: 100%;
+  height: 700px;
+}
+/* AboutUs */
+.imgMap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  background-size: cover;
+  opacity: 0.7;
+}
+.about-us-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+    url("./Assets/background.jpg");
+
+  opacity: 1;
+  /* background-image: url("/src/components/Images/build.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+}
+.imgMap :hover {
+  transform: translateY(-4px);
+}
+.gridMap {
+  margin: 20px;
+  padding-left: 50px;
+}
+.gridAbout {
+  margin: 20px;
+
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.paraAbout {
+  /* line-height: 1.8; */
+  /* margin: 5px 0px 15px; */
+  /* font-size: 20px; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 2;
+  /* line-break: anywhere; */
+}
+/* heading */
+.common-head {
+  color: rgb(236, 240, 240);
+  text-align: center;
+  padding-top: "70px";
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0px;
+}
+.common-devider {
+  text-align: center;
+  width: 80px;
+  border-top: solid rgb(37, 63, 64);
+} /* footer */
+.footer-img-logo {
+  width: 300px;
+  /* height: 300px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.footer-para {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.footer-head {
+  color: #fff;
+  font-weight: 600;
+}
+/* Shedule */
+.scedule-form-title {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.scedule-form-para {
+  line-height: 1.8;
+  margin: 5px 0px 15px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #808080;
+}
+
+/* Request */
+.request-container {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+/* what we do */
+
+.whatwedo-head {
+  margin-bottom: 55px;
+}
+.whatwedo-content-head {
+  /* color: rgb(119, 125, 111); */
+
+  /* text-align: left;
+  margin-top: 205px;
+  margin-left: 155px; */
+  /* max-width: 600px; */
+
+  /* font-weight: 600; */
+
+  /* letter-spacing: 0em; */
+  /* line-height: 1.2em; */
+
+  /* max-width: 600px; */
+  color: #ffff;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 60%);
+
+  font-weight: 500;
+  font-style: normal;
+  font-size: 37px;
+  letter-spacing: 0em;
+  line-height: 1.2em;
+
+  padding: 140px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.whatwedo-para {
+  /* color: rgb(119, 125, 111); */
+}
+.whatwedo-icon:hover {
+  transform: translateY(-4px);
+}
+.Service-start-head {
+  font-size: 32px;
+  text-align: left;
+
+  margin-left: 155px;
+  /* max-width: 600px; */
+  color: #ffff;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 60%);
+
+  /* font-weight: 600; */
+  font-style: normal;
+
+  letter-spacing: 0em;
+  line-height: 1.2em;
+}
+.Service-start-content {
+  text-align: left;
+  margin-top: -19px;
+  margin-left: 155px;
+  /* max-width: 600px; */
+  color: #ffff;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 60%);
+
+  /* font-weight: 600; */
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 0em;
+  line-height: 1.2em;
+}
+/* how it works */
+.howitworks-head {
+  margin-bottom: 55px;
+  color: rgb(37, 63, 64);
+}
+/* .howwedo-icon :hover {
+  transform: translateY(-4px);
+} */
+.howwedo-head {
+  color: rgb(37, 63, 64);
+}
+.howwedo-para {
+  color: rgb(119, 125, 111);
+}
+
+/* for phone call  desktop */
+.phonecall {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 220px;
+  right: 40px;
+  background-color: #2553d3;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 40px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+/* for desktop */
+.whatsapp_float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 150px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  margin-top: 16px;
+}
+/* conatctUs */
+.contact-container {
+  padding: 20px;
+}
+.contact {
+  padding: 25%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* for mobile */
+@media screen and (max-width: 767px) {
+  .home-vedio {
+    height: 480px;
+  }
+  .contact {
+    padding: 8%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .whatsapp-icon {
+    margin-top: 10px;
+  }
+  .phone-icon {
+    margin-top: 8px;
+  }
+
+  .whatsapp_float {
+    width: 40px;
+    height: 40px;
+    bottom: 160px;
+    right: 10px;
+    font-size: 22px;
+  }
+  .phonecall {
+    width: 40px;
+    height: 40px;
+    bottom: 208px;
+    right: 10px;
+    font-size: 22px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1000px) {
+  /* dashboard */
+  .Service-start-head {
+    /* font-size: 15px; */
+    text-align: center;
+    /* padding: 10px; */
+    /* margin-top: 125px; */
+    margin-left: 0px;
+    text-shadow: none;
   }
-  to {
-    transform: rotate(360deg);
+  .Service-start-content {
+    margin-top: -11px; /* font-size: 15px; */
+    text-align: center;
+    /* padding: 10px; */
+    /* margin-top: 125px; */
+    font-size: 16px;
+    margin-left: 0px;
+    text-shadow: none;
+  }
+  .dashboard {
+    height: 570px;
+    text-align: center;
+  }
+  .request-container {
+    margin-top: 28px;
+    margin-bottom: 50px;
+  }
+  .whatwedo-container {
+    height: 100%;
+  }
+  .whatwedo-head {
+    margin-bottom: 55px;
+  }
+  .dashboardContent {
+    font-size: 18px;
+    text-align: center;
+    /* padding: 10px; */
+    margin-top: 125px;
+    margin-left: 0px;
+    text-shadow: none;
+  }
+  .Service-start-head {
+    font-size: 20px;
+  }
+  .dashboardContent2 {
+    font-size: 15px;
+    text-align: center;
+    /* padding: 10px; */
+
+    margin-left: 0px;
+    text-shadow: none;
+  }
+  .whatwedo-content-head {
+    padding: 0px;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  .dashboardbutton {
+    margin-left: 0px;
+    /* margin-top: 30px; */
+  } /* aboutus */
+  .imgMap {
+    max-width: 300px;
+  }
+  .gridMap {
+    margin: 5px;
+    padding-left: 10px;
+  }
+  .gridAbout {
+    margin: 5px;
+    padding-right: 5px;
+  }
+  .paraAbout {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 10px;
+    font-size: 14px;
+    padding-top: 15px;
+  } /* footer */
+  .footer-img-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-para {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+  }
+  .footer-head {
+    font-size: 16px;
   }
 }
