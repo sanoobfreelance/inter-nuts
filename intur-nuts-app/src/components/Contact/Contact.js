@@ -1,7 +1,25 @@
-import { Button, Grid, TextField } from "@mui/material";
-import mail from "../../Assets/mail.png";
+import {
+  Button,
+  Grid,
+  TextField,
+  Container,
+  Alert,
+  Snackbar,
+} from "@mui/material";
+
 import SendIcon from "@mui/icons-material/Send";
 import { makeStyles } from "@mui/styles";
+
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+import AOS from "aos";
 const useStyles = makeStyles({
   input: {
     background: "#ebe9e6",
@@ -14,10 +32,89 @@ const useStyles = makeStyles({
   },
 });
 const Contact = () => {
+  const [openNotification, setOpenNotification] = React.useState(false);
+  const [errorNotification, setErrorNotification] = React.useState(false);
+  const form = useRef();
+  const [formData, setFormdata] = React.useState({
+    full_name: "",
+  });
+  const textChange = (event) => {
+    setFormdata({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleCloseNotification = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenNotification(false);
+    setErrorNotification(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleCloseNotification}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (formData.full_name.length) {
+      emailjs
+        .sendForm(
+          "service_25ksgma",
+          "template_b2cc80h",
+          form.current,
+          "user_8nR6SbZuVra2HIkFJKIY4"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setOpenNotification(true);
+            e.target.reset();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else {
+      setErrorNotification(true);
+    }
+  };
+
   const classes = useStyles();
   return (
     <div className="about-us-container">
-      <h1 className="common-head">Contact Us</h1>
+      <h1 className="common-head">Contact Us</h1> {/* notification */}
+      <Snackbar
+        open={errorNotification}
+        autoHideDuration={4000}
+        onClose={handleCloseNotification}
+        action={action}
+      >
+        <Alert severity="error" sx={{ width: "100%" }}>
+          Company name is mandatory
+        </Alert>
+      </Snackbar>
+      <Snackbar
+        open={openNotification}
+        autoHideDuration={4000}
+        onClose={handleCloseNotification}
+        action={action}
+      >
+        <Alert severity="success" sx={{ width: "100%" }}>
+          Message sent successfully
+        </Alert>
+      </Snackbar>
       <Grid
         container
         direction="row"
@@ -40,6 +137,7 @@ const Contact = () => {
                 variant="filled"
                 size="small"
                 margin="normal"
+                name="full_name"
               />
             </Grid>{" "}
             <Grid item xs={12} md={6}>
@@ -53,6 +151,7 @@ const Contact = () => {
                 variant="filled"
                 size="small"
                 margin="normal"
+                name="mobile"
               />
             </Grid>
           </Grid>
@@ -65,6 +164,7 @@ const Contact = () => {
             variant="filled"
             size="small"
             margin="normal"
+            name="email"
           />
           <TextField
             className={classes.input}
@@ -77,6 +177,7 @@ const Contact = () => {
             rows={4}
             size="small"
             margin="normal"
+            name="description"
           />{" "}
           <Button
             variant="contained"

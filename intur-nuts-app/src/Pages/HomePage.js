@@ -12,14 +12,6 @@ const HomePage = () => {
     <div>
       <div className="dashboard">
         <Navbar />
-        <video
-          src={vidieo1}
-          width="100%"
-          height="500"
-          className="home-vedio"
-          controls="controls"
-          autoplay="true"
-        />
       </div>
       <div>
         <AboutUs />
