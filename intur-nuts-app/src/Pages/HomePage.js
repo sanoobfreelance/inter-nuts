@@ -13,16 +13,16 @@ const HomePage = () => {
       <div className="dashboard">
         <Navbar />
       </div>
-      <div>
+      <div id="about-us">
         <AboutUs />
       </div>
-      <div>
+      <div id="ourproducts">
         <Products />
       </div>
       <div>
         <Items />
       </div>
-      <div>
+      <div id="contact-us">
         <Contact />
       </div>
       <div id="contact-us">

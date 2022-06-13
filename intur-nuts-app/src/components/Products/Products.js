@@ -35,8 +35,12 @@ const Products = () => {
   };
   return (
     <div className="service-card-container">
-      <h2 data-aos="fade-right" className="common-head">
-        Products
+      <h2
+        data-aos="fade-right"
+        className="common-head"
+        style={{ marginBottom: 20 }}
+      >
+        PRODUCTS
       </h2>{" "}
       <Carousel
         swipeable={true}

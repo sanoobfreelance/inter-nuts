@@ -63,7 +63,7 @@ export default function Footer() {
                 }}
                 fontSize="small"
               />{" "}
-              info@internutz.com
+              internutzproducts@gmail.com
             </span>{" "}
           </Grid>
           <Grid style={{ textAlign: "right" }} item xs={4}>

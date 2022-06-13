@@ -32,9 +32,10 @@ const useStyles = makeStyles({
   },
 });
 const Contact = () => {
+  const form = useRef();
   const [openNotification, setOpenNotification] = React.useState(false);
   const [errorNotification, setErrorNotification] = React.useState(false);
-  const form = useRef();
+
   const [formData, setFormdata] = React.useState({
     full_name: "",
   });
@@ -66,15 +67,17 @@ const Contact = () => {
       </IconButton>
     </React.Fragment>
   );
+
   const sendEmail = (e) => {
     e.preventDefault();
-    if (formData.full_name.length) {
+    console.log(formData.full_name.length);
+    if (formData.full_name.length > 0) {
       emailjs
         .sendForm(
-          "service_25ksgma",
-          "template_b2cc80h",
+          "service_5g3ddge",
+          "template_8vns5fa",
           form.current,
-          "user_8nR6SbZuVra2HIkFJKIY4"
+          "B15yWeodhz0-FYaNL"
         )
         .then(
           (result) => {
@@ -87,6 +90,7 @@ const Contact = () => {
           }
         );
     } else {
+      console.log("errr");
       setErrorNotification(true);
     }
   };
@@ -94,102 +98,115 @@ const Contact = () => {
   const classes = useStyles();
   return (
     <div className="about-us-container">
-      <h1 className="common-head">Contact Us</h1> {/* notification */}
-      <Snackbar
-        open={errorNotification}
-        autoHideDuration={4000}
-        onClose={handleCloseNotification}
-        action={action}
-      >
-        <Alert severity="error" sx={{ width: "100%" }}>
-          Company name is mandatory
-        </Alert>
-      </Snackbar>
-      <Snackbar
-        open={openNotification}
-        autoHideDuration={4000}
-        onClose={handleCloseNotification}
-        action={action}
-      >
-        <Alert severity="success" sx={{ width: "100%" }}>
-          Message sent successfully
-        </Alert>
-      </Snackbar>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={2}
-        className="contact"
-      >
-        <Grid item xs={12} md={12}>
-          {" "}
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              {" "}
-              <TextField
-                className={classes.input}
-                color="secondary"
-                id="filled-basic"
-                fullWidth
-                label="Full Name"
-                variant="filled"
-                size="small"
-                margin="normal"
-                name="full_name"
-              />
-            </Grid>{" "}
-            <Grid item xs={12} md={6}>
-              {" "}
-              <TextField
-                className={classes.input}
-                id="outlined-basic"
-                fullWidth
-                color="secondary"
-                label="Mobile Number"
-                variant="filled"
-                size="small"
-                margin="normal"
-                name="mobile"
-              />
+      <form onSubmit={sendEmail} ref={form}>
+        <h1 data-aos="fade-right" className="common-head">
+          CONTACT US
+        </h1>{" "}
+        {/* notification */}
+        <Snackbar
+          open={errorNotification}
+          autoHideDuration={4000}
+          onClose={handleCloseNotification}
+          action={action}
+        >
+          <Alert severity="error" sx={{ width: "100%" }}>
+            Full name is mandatory
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          open={openNotification}
+          autoHideDuration={4000}
+          onClose={handleCloseNotification}
+          action={action}
+        >
+          <Alert severity="success" sx={{ width: "100%" }}>
+            Message sent successfully
+          </Alert>
+        </Snackbar>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={2}
+          className="contact"
+        >
+          <Grid item xs={12} md={12}>
+            {" "}
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6}>
+                {" "}
+                <TextField
+                  className={classes.input}
+                  color="secondary"
+                  id="filled-basic"
+                  fullWidth
+                  label="Full Name"
+                  data-aos="fade-right"
+                  variant="filled"
+                  onChange={textChange}
+                  size="small"
+                  margin="normal"
+                  name="full_name"
+                />
+              </Grid>{" "}
+              <Grid item xs={12} md={6}>
+                {" "}
+                <TextField
+                  className={classes.input}
+                  id="outlined-basic"
+                  fullWidth
+                  data-aos="fade-right"
+                  color="secondary"
+                  label="Mobile Number"
+                  variant="filled"
+                  size="small"
+                  margin="normal"
+                  name="mobile"
+                />
+              </Grid>
             </Grid>
+            <TextField
+              className={classes.input}
+              fullWidth
+              id="outlined-basic"
+              color="secondary"
+              label="Email"
+              data-aos="fade-right"
+              variant="filled"
+              size="small"
+              margin="normal"
+              name="email"
+            />
+            <TextField
+              className={classes.input}
+              fullWidth
+              id="standard-multiline-static"
+              color="secondary"
+              label="Description"
+              variant="filled"
+              multiline
+              data-aos="fade-right"
+              rows={4}
+              size="small"
+              margin="normal"
+              name="description"
+            />{" "}
+            <Button
+              variant="contained"
+              size="small"
+              margin="normal"
+              fullWidth
+              data-aos="fade-right"
+              type="submit"
+              // onClick={sendEmail1}
+              endIcon={<SendIcon />}
+            >
+              Send
+            </Button>
           </Grid>
-          <TextField
-            className={classes.input}
-            fullWidth
-            id="outlined-basic"
-            color="secondary"
-            label="Email"
-            variant="filled"
-            size="small"
-            margin="normal"
-            name="email"
-          />
-          <TextField
-            className={classes.input}
-            fullWidth
-            id="standard-multiline-static"
-            color="secondary"
-            label="Description"
-            variant="filled"
-            multiline
-            rows={4}
-            size="small"
-            margin="normal"
-            name="description"
-          />{" "}
-          <Button
-            variant="contained"
-            size="small"
-            margin="normal"
-            fullWidth
-            endIcon={<SendIcon />}
-          >
-            Send
-          </Button>
         </Grid>
-      </Grid>
+      </form>
     </div>
   );
 };

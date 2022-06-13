@@ -62,9 +62,8 @@ html {
   width: 100%;
   height: 800px;
   padding-top: 20px;
-
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./Assets/about-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+    url("./Assets/background.jpg");
 
   opacity: 1;
   /* background-image: url("/src/components/Images/build.jpg"); */

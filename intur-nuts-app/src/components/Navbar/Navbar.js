@@ -75,7 +75,6 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-
             <li
               data-aos="fade-down"
               data-aos-easing="linear"
@@ -83,11 +82,10 @@ const Navbar = () => {
               className="option"
               onClick={closeMobileMenu}
             >
-              <a className="nav-links" href="#/our-services">
-                Our Services
+              <a className="nav-links" href="#about-us">
+                About Us
               </a>
             </li>
-
             <li
               data-aos="fade-down"
               data-aos-easing="linear"
@@ -95,8 +93,8 @@ const Navbar = () => {
               className="option"
               onClick={closeMobileMenu}
             >
-              <a className="nav-links" href="#/about-us">
-                About Us
+              <a className="nav-links" href="#ourproducts">
+                Our Products
               </a>
             </li>
 
@@ -106,13 +104,12 @@ const Navbar = () => {
               data-aos-duration="600"
               className="option"
               onClick={closeMobileMenu}
+              style={{ textDecoration: "none" }}
             >
-              <Link style={{ textDecoration: "none" }} to="/#contact-us">
-                <a className="nav-links" href="#our-services">
-                  {" "}
-                  Contact Us
-                </a>
-              </Link>
+              <a className="nav-links" href="#contact-us">
+                {" "}
+                Contact Us
+              </a>
             </li>
           </ul>
           <div className="mobile-view" onClick={handleClick}>
