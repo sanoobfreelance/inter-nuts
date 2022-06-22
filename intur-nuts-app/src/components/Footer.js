@@ -69,17 +69,17 @@ export default function Footer() {
           <Grid style={{ textAlign: "right" }} item xs={4}>
             <p className="footer-head">Follow Us:</p>
             <Typography>
-              <a href="https://www.instagram.com/accolibra/">
+              <a href="/">
                 <InstagramIcon fontSize="small" style={{ color: "white" }} />
               </a>
-              <a href="https://www.facebook.com/accolibra">
+              <a href="/">
                 <FacebookIcon fontSize="small" style={{ color: "white" }} />
               </a>
 
-              <a href="https://mobile.twitter.com/accolibra">
+              <a href="/">
                 <TwitterIcon fontSize="small" style={{ color: "white" }} />
               </a>
-              <a href="https://www.linkedin.com/in/acco-libra-38175b230">
+              <a href="/">
                 <LinkedInIcon fontSize="small" style={{ color: "white" }} />
               </a>
             </Typography>
