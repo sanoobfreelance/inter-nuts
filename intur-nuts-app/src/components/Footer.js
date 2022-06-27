@@ -42,10 +42,10 @@ export default function Footer() {
             <p className="footer-para">
               {" "}
               <LocationOnTwoToneIcon
-                style={{ marginTop: 7, marginRight: 5 }}
+                style={{ marginTop: 9, marginRight: 5 }}
                 fontSize="small"
               />
-              inturnutz address, Suite 93A, palakkd, Kerala – 683561.
+              Inter Nutz, Pattambi Road, Pancharathupadi,Palakkad, Kerala, India
             </p>
             <span className="footer-para">
               <PhoneIphoneTwoToneIcon
@@ -53,6 +53,8 @@ export default function Footer() {
                 fontSize="small"
               />{" "}
               +91 9188858666,
+            </span>{" "}
+            <span className="footer-para">
               <EmailTwoToneIcon
                 style={{
                   marginRight: 5,
@@ -64,7 +66,7 @@ export default function Footer() {
                 fontSize="small"
               />{" "}
               internutzproducts@gmail.com
-            </span>{" "}
+            </span>
           </Grid>
           <Grid style={{ textAlign: "right" }} item xs={4}>
             <p className="footer-head">Follow Us:</p>

@@ -61,6 +61,7 @@ const Items = () => {
           >
             <Grid item key={item?.id}>
               <Card
+                data-aos="fade-right"
                 style={{ borderTopLeftRadius: 23, borderTopRightRadius: 23 }}
                 // className="service-card"
               >
@@ -71,6 +72,7 @@ const Items = () => {
                     height="500"
                     controls="controls"
                     autoplay="true"
+                    muted
                   />
                 </CardActionArea>
               </Card>
