@@ -98,7 +98,6 @@ const Products = () => {
                     <Typography
                       data-aos="fade-right"
                       style={{
-                        color: "#000000",
                         fontSize: 14,
                         fontWeight: 400,
                       }}

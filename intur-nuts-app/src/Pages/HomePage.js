@@ -11,8 +11,14 @@ const HomePage = () => {
   return (
     <div>
       <div className="dashboard">
-        <Navbar />
-      </div>
+        <Navbar />{" "}
+        <div className="dashboardContent">
+          <p>
+            HAVE NUTS <br />
+            AND BE NUTS
+          </p>
+        </div>
+      </div>{" "}
       <div id="about-us">
         <AboutUs />
       </div>

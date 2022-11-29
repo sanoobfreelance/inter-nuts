@@ -6,8 +6,9 @@
   align-items: center;
   padding: 0px 40px;
   height: 80px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-    url("../../Assets/about-image.jpg");
+  margin-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+    url("../../Assets/background.jpg");
 
   opacity: 1;
   /* background-image: url("/src/components/Images/build.jpg"); */
@@ -126,8 +127,8 @@
     grid-gap: 0px;
   }
   .nav-options.active {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-      url("../../Assets/about-image.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+      url("../../Assets/background.jpg");
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
