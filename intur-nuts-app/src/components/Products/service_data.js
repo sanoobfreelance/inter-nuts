@@ -1,36 +1,36 @@
-import one from "../../Assets/products/one.jpeg";
-import two from "../../Assets/products/two.jpeg";
-import three from "../../Assets/products/three.jpeg";
-import four from "../../Assets/products/four.jpeg";
+import one from "../../Assets/products/one.jpg";
+import two from "../../Assets/products/two.jpg";
+import three from "../../Assets/products/three.jpg";
+import four from "../../Assets/products/four.jpg";
 
 const services_Data = [
   {
     id: 1,
     image: one,
-    name: "One",
+    name: "Tomato Flavour",
     discription:
-      "The world is blessed with hundreds of potato-chip options, but those options would probably be reduced to dozens were it not for Lay's, which generally take up an entire grocery store aisle thanks to their ridiculous number of flavors. They're the undisputed king of the potato-chip realm.",
+      "Peanuts, Wheat flour, Iodised Salt, Coconut milk, Tomato Masala & edible oil",
   },
   {
     id: 2,
     image: two,
-    name: "Two",
+    name: "Hot & Spicy",
     discription:
-      "The world is blessed with hundreds of potato-chip options, but those options would probably be reduced to dozens were it not for Lay's, which generally take up an entire grocery store aisle thanks to their ridiculous number of flavors. They're the undisputed king of the potato-chip realm.",
+      "Peanuts, Wheat flour, Iodised Salt, Coconut milk, Spicy Masala & edible oil",
   },
   {
     id: 3,
     image: three,
-    name: "Three",
+    name: "Chat Pata Flavour",
     discription:
-      "The world is blessed with hundreds of potato-chip options, but those options would probably be reduced to dozens were it not for Lay's, which generally take up an entire grocery store aisle thanks to their ridiculous number of flavors. They're the undisputed king of the potato-chip realm.",
+      "Peanuts, Wheat flour, Iodised Salt Coconut milk, Chat Masala & edible oil",
   },
   {
     id: 4,
     image: four,
-    name: "Four",
+    name: "Cocont milk",
     discription:
-      "The world is blessed with hundreds of potato-chip options, but those options would probably be reduced to dozens were it not for Lay's, which generally take up an entire grocery store aisle thanks to their ridiculous number of flavors. They're the undisputed king of the potato-chip realm.",
+      "Peanuts, Wheat flour, Coconut milk, sugar, Iodised salt Masala & edible oil",
   },
 ];
 export default services_Data;

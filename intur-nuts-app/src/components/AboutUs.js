@@ -36,6 +36,14 @@ const AboutUs = () => {
             family or friends. This mixture has a shelf life of about 6 months
             and must be stored in airtight containers and is available in 100
             grams packing.
+            <br />
+            Fully automatic machines used in the making process which ensured no
+            hand touch so that highly hygienic and sorted quality ingredients
+            ensures high quality product.
+            <br />
+            Peanuts provides good fats. They can boost up your productivity and
+            reduces chances of stroke. They act as antioxidants. Protects skin
+            and provide active vitamins.They reduces the risk of weight gain.
           </p>{" "}
         </Grid>
       </Grid>

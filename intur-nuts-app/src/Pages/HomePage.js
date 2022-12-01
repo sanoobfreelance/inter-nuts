@@ -7,15 +7,19 @@ import Products from "../components/Products/Products";
 import vidieo1 from "../Assets/vidieo1.mp4";
 import Contact from "../components/Contact/Contact";
 import Items from "../components/Items/Items";
+import Director from "../Director/Director";
 const HomePage = () => {
   return (
     <div>
       <div className="dashboard">
         <Navbar />{" "}
         <div className="dashboardContent">
-          <p>
-            HAVE NUTS <br />
-            AND BE NUTS
+          <p
+            style={{
+              textTransform: "uppercase",
+            }}
+          >
+            Protein Enriched
           </p>
         </div>
       </div>{" "}
@@ -28,10 +32,13 @@ const HomePage = () => {
       <div>
         <Items />
       </div>
+      <div>
+        <Director />
+      </div>
       <div id="contact-us">
         <Contact />
       </div>
-      <div id="contact-us">
+      <div>
         <Footer />
       </div>
     </div>

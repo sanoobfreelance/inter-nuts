@@ -7,8 +7,7 @@
   padding: 0px 40px;
   height: 80px;
   margin-top: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-    url("../../Assets/background.jpg");
+  background-image: url("../../Assets/background.jpeg");
 
   opacity: 1;
   /* background-image: url("/src/components/Images/build.jpg"); */
@@ -127,8 +126,7 @@
     grid-gap: 0px;
   }
   .nav-options.active {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-      url("../../Assets/background.jpg");
+    background-image: url("../../Assets/background.jpeg");
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;

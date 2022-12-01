@@ -6,7 +6,7 @@
   /* margin-right: 20px; */
   /* padding: 20px; */
   width: 400px;
-  min-height: 600px;
+  min-height: 550px;
 }
 
 .image-service-one {
@@ -22,7 +22,7 @@
   max-height: 400px;
 }
 .service-one-container {
-  background-image: url("../../Assets/background.jpg");
+  background-image: url("../../Assets/background.jpeg");
   background-size: cover;
   background-attachment: fixed;
   height: 700px;
@@ -43,8 +43,7 @@
   margin-bottom: 50px;
 }
 .service-card-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-    url("../../Assets/background.jpg");
+  background-image: url("../../Assets/background.jpeg");
 
   background-size: cover;
   background-attachment: fixed;
@@ -70,6 +69,6 @@
     padding-top: 20px;
   }
   .service-card {
-    width: 300px;
+    width: 330px;
   }
 }
