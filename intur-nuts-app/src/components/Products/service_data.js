@@ -1,7 +1,7 @@
-import one from "../../Assets/products/one.jpg";
-import two from "../../Assets/products/two.jpg";
-import three from "../../Assets/products/three.jpg";
-import four from "../../Assets/products/four.jpg";
+import one from "../../Assets/products/one.jpeg";
+import two from "../../Assets/products/two.jpeg";
+import three from "../../Assets/products/three.jpeg";
+import four from "../../Assets/products/four.jpeg";
 
 const services_Data = [
   {
